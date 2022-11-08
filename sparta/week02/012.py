@@ -3,8 +3,12 @@ shop_orders = ["오뎅", "콜라", "만두"]
 
 
 def is_available_to_order(menus, orders):
-    # 이 부분을 채워보세요!
-    return True
+    set_menus = set(menus)
+    set_orders = set(orders)
+    if set_menus & set_orders == set_orders:
+        return True
+    else:
+        return False
 
 
 result = is_available_to_order(shop_menus, shop_orders)
