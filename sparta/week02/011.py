@@ -9,10 +9,10 @@ class LinkedList:
         self.head = Node(value)
 
     def append(self, value):
-        cur = self.head
-        while cur.next is not None:
-            cur = cur.next
-        cur.next = Node(value)
+        curr = self.head
+        while curr.next is not None:
+            curr = curr.next
+        curr.next = Node(value)
 
     def get_kth_node_from_last(self, k):
         length = 1
