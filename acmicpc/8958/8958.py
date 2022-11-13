@@ -1,16 +1,34 @@
-t = int(input())
-for _ in range(t):
-    scores = input()
+# t = int(input())
+# for _ in range(t):
+#     scores = input()
+#     # 1 3 6 9 15 피보나치
+#     # O인지  아닌지  판별 
+
+#     # X를 만나면 앞의 O를 세어본다 
+
+
+
+#     # score = 0
+#     # temp = 1
+#     # for idx in range(len(scores)):
+#     #     if scores[idx] == "O":
+#     #         score += temp
+#     #         temp += 1
+#     #     else:
+#     #         temp = 1
+#     print(scores)
+
+
+import sys
+N = int(sys.stdin.readline())
+for i in range(N):
+    quiz_result = sys.stdin.readline()
+    accum = 1
     score = 0
-    bonus = 0
-    for idx in range(len(scores) ):
-        if scores[idx] == "O":
-            if scores[idx] == scores[idx-1]:
-                score += 1 + bonus
-                bonus += 1
-            else:
-                score += 1
-                bonus += 1
+    for q in quiz_result:
+        if q is 'O':
+            score += accum
+            accum += 1
         else:
-            bonus = 0
+            accum = 1
     print(score)
